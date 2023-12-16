@@ -1,0 +1,13 @@
+:root {
+    --white: azure; 
+    --blue: #1E25D0;
+    --grey: #7FBADA;
+    --black: black;
+}
+body {
+    background-image: url(/src/img/gotas-agua-sobre-vidrio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
