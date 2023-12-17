@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Macondo+Swash+Caps&family=Merriweather:ital,wght@0,400;0,900;1,700;1,900&family=Roboto:ital,wght@0,100;0,700;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" src="/src/css/index.css">
+    <link rel="stylesheet" href="/src/css/index.css">
     <title>To Do List</title>
 </head>
 <body>
     <section class="container">
         <article class="profile">
             <h1>SMART DROPS</h1>
-            <span>“El poder del hábito aplicado con inteligencia”</span>
-            <div class="date"></div>
+            <div class="slogan">“El poder del hábito aplicado con inteligencia”</div>
+            <div id="date">Diciembre 16 de 2023</div>
 
         </article>
         <div class="addtask">
@@ -25,17 +23,27 @@
             <i id="addtask" class="fa-solid fa-circle-plus" style="color: #0e36d8;"></i>
         </div>
         <div class="tasklist">
-            <span id="notask">No hay tareas pendientes</span>
+            <!--<span id="notask">No hay tareas pendientes</span>-->
             <ul id="tasklist">
                 <li>
+                    <i class="fa-sharp fa-regular fa-circle" style="color: #f1f3f8;"></i>
                     <p class="text"> Hacer la tarea de F5</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #0e36d8;"></i>
-                    <i class="fa-solid fa-trash-can" style="color: #0e36d8;"></i>
-                    <i class="fa-sharp fa-regular fa-circle" style="color: #0e36d8;" data="done" id="0"></i>
+                    <!--<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>-->
+                    <i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #f1f3f8;"></i>
+                    
+                    <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i>
+                    
 
                 </li>
-
+                <!--<li>
+                    <i class="fa-sharp fa-regular fa-circle" style="color: #f1f3f8;"></i>
+                    <p class="text"> Hacer el diseño en Figma</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>-->
+                    <!--<i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #f1f3f8;"></i>
+                    
+                    <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i>
+                    
+                </li>-->
             </ul>
 
         </div>
@@ -45,6 +53,6 @@
 
 
 
-   <script src="/src/js/index.js"></script>
+   <script href="/src/js/index.js"></script>
 </body>
 </html>
