@@ -59,11 +59,10 @@ body {
 }
 .addtask input {
     width: 100%;
-    height: 80%;
+    height: 120%;
     border-radius: 8px;
     border: none;
     background-color:var(--grey);
-    font-size: 1rem;
     font-family: 'Macondo Swash Caps', cursive;
 }
 .addtask i {
@@ -75,5 +74,7 @@ body {
     cursor: pointer;
 }
 .addtask input::placeholder {
-
+    font-size: 1rem;
+    color: var(--purple);
+    
 }
