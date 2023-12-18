@@ -11,7 +11,7 @@
     --purple: #540A81;
 }
 body {
-    background-image: url(/src/img/gotas-agua-sobre-vidrio.jpg);
+    background-image: url(/img/gotas-agua-sobre-vidrio.jpg);
     height: 100vh;
     background-size: cover;
     font-family: 'Macondo Swash Caps', cursive;
