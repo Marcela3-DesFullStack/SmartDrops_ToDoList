@@ -2,6 +2,8 @@ const date = document.querySelector("#date")
 const taskList = document.querySelector("#tasklist")
 const input = document.querySelector("#input")
 const taskEnter = document.querySelector("#task-enter")
+const hiddenTaskBtn= document.querySelector("#hiddentask-btn")
+const hiddenTask = document.querySelector("#hiddentask") 
 
 // Adding tasks//
 function addTask (task) {
@@ -12,7 +14,7 @@ function addTask (task) {
                         <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i> 
                         </li>  
                     `
-    tasklist.insertAdjacentHTML("beforeend", elementTask);
+    taskList.insertAdjacentHTML("beforeend", elementTask);
 }
 taskEnter.addEventListener('click',()=> {
     const task = input.value
@@ -22,3 +24,8 @@ taskEnter.addEventListener('click',()=> {
     input.value= ''
 
 })
+// Hidden comments//
+hiddenTaskBtn.addEventListener('click',hideText);
+function hideText () {
+    hiddenTask.classList.toggle('show');
+}

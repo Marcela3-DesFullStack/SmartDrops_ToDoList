@@ -103,3 +103,13 @@ body {
     text-decoration: line-through;
     color: var(--white);
 }
+#readmore.btn :hover {
+    cursor: pointer;
+}
+.taskhidden {
+    display: none;
+
+}
+.taskshow {
+    display: block;
+}
