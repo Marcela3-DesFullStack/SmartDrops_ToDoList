@@ -1,9 +1,8 @@
-const date = document.querySelector("#date")
-const taskList = document.querySelector("#tasklist")
-const input = document.querySelector("#input")
-const taskEnter = document.querySelector("#task-enter")
-const hiddenTaskBtn= document.querySelector("#hiddentask-btn")
-const hiddenTask = document.querySelector("#hiddentask") 
+const date = document.querySelector("#date");
+const taskList = document.querySelector("#tasklist");
+const input = document.querySelector("#input");
+const taskEnter = document.querySelector("#task-enter");
+
 
 // Adding tasks//
 function addTask (task) {
@@ -25,7 +24,11 @@ taskEnter.addEventListener('click',()=> {
 
 })
 // Hidden comments//
+let hiddenTaskBtn= document.getElementById("hiddentask-btn");
+let hiddenTask = document.getElementById("hiddentask");
+
 hiddenTaskBtn.addEventListener('click',hideText);
+
 function hideText () {
     hiddenTask.classList.toggle('show');
 }

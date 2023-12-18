@@ -85,7 +85,7 @@ body {
     color: azure;
     width:100%;
     display:grid;
-    grid-template-columns: 10% 75% 10% 10%;
+    grid-template-columns: 10% 55% 10% 10%;
     margin: 0.5rem 0;
 }
 .tasklist i {
@@ -103,11 +103,11 @@ body {
     text-decoration: line-through;
     color: var(--white);
 }
-#readmore.btn :hover {
+#hiddentask-btn :hover {
     cursor: pointer;
 }
 .taskhidden {
-    display: none;
+    display: block;
 
 }
 .taskshow {
