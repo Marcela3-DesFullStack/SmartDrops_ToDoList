@@ -109,7 +109,6 @@ display: flex;
 justify-content:space-around;
 }
 
-
 @media(max-width:768px){
 
 .crud_form {
