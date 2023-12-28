@@ -1,115 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+
 *{
-    box-sizing:border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-:root {
-    --white: azure; 
-    --blue: #1E25D0;
-    --grey: #7FBADA;
-    --black: black;
-    --purple: #540A81;
+
+body, button, input, textarea {
+    font-family: 'Macondo Swash Caps', cursive;;
 }
-body {
-    background-image: url(/img/gotas-agua-sobre-vidrio.jpg);
-    height: 100vh;
-    background-size: cover;
-    font-family: 'Macondo Swash Caps', cursive;
-    
-}
+
 .container {
-    width: 25rem;
-    height: 37.5rem;
-    margin:auto;
-    max-width: 80%;
-    padding-top: 10%;
-}
-.profile h1 {
-    color: var(--blue);
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0.2rem;
-    font-style: italic;   
-}
-.slogan {
-    color: var(--purple);
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0.8rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 10rem;
     
 }
-#date {
-    color: var(--purple);
-    font-size: 0.8rem;
-    font-weight: 700;
+.title {
     text-align: center;
 }
-.addtask {
-    background-color: #7FBADA;
-    border-radius: 15px;
-    height: 2.2rem;
+
+.crud_form {
     display: flex;
-    align-items: center;
-    padding: 10px;
-    gap: 1rem;
-    margin: 3.5rem 0;
-
+    margin: 0.63rem 0;
+    margin-top: 4.4rem;
+    margin-bottom: 2.2rem;
+       
 }
-.addtask input {
-    width: 100%;
-    height: 120%;
-    border-radius: 8px;
-    border: none;
-    background-color:var(--grey);
-    font-family: 'Macondo Swash Caps', cursive;
-}
-.addtask i {
-    font-size: 1.5rem;
-    color: var(--blue);
-}
-.addtask i:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-.addtask input::placeholder {
+.task_input , textarea {
+    flex: 1;
+    padding: 0.3rem;
+    margin-right: 1rem;
     font-size: 1rem;
-    color: var(--purple);
-
+    text-align: center;
 }
-.tasklist li {
-    background: linear-gradient(to bottom,var(--purple),var(--grey));
-    border-radius: 1rem;
-    padding: 0.5rem;
+  
+.button--primary {
+    background-color: blueviolet;
+    border: none;
     color: azure;
-    width:100%;
-    display:grid;
-    grid-template-columns: 10% 55% 10% 10%;
-    margin: 0.5rem 0;
+    border-radius: 1rem;
+    padding: 0.3rem 0.63rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
 }
-.tasklist i {
-    font-size: 1.1rem;
+.button--secondary {
+    background-color: rgb(46, 14, 226);
+    border: none;
+    color: azure;
+    border-radius: 1rem;
+    padding: 0.3rem 0.3rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.button--tertiary {
+    background-color: rgb(46, 14, 226);
+    border: none;
+    color: azure;
+    border-radius: 1rem;
+    padding: 0.3rem 0.3rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.checkbox {
+    width: 1.2rem; 
+    height: 2rem; 
+    border-radius: 300px; 
+    border: 1.5rem solid #1b138a; 
+    cursor: pointer;
    
-}
-.tasklist i:hover {
-    color: var(--blue);
-    cursor: pointer;
-}
-.tasklist >ul p {
-    font-size: 1.0rem;
-}
-.line-through {
-    text-decoration: line-through;
-    color: var(--white);
-}
-#hiddentask-btn :hover {
-    cursor: pointer;
-}
-.taskhidden {
-    display: block;
 
 }
-.taskshow {
-    display: block;
+
+.crud_table {
+    width: 100%;
+    border-spacing: 0.2rem 1rem;
+    /*border-collapse: collapse;*/
 }
+
+.table_header , .table_body td {
+    border-top: 0.01rem solid blueviolet;
+    padding: 0.5rem;
+    
+}
+.table_header  {
+    background-color: rgb(194, 177, 211);
+    color: rgb(97, 20, 185);
+
+}
+.table_body td {
+    white-space:normal;
+    vertical-align: middle;
+
+}
+.table_body td:nth-child(1) {
+    max-width: 1.8rem;
+    }
+.table_body td:nth-child(2) {
+   max-width: 5.5rem;
+   }
+.table_body td:nth-child(3) {
+    max-width: 10rem;
+    text-align: justify;
+    }
+
+.table_body td:nth-child(4) {
+display: flex;
+justify-content:space-around;
+}
+
+
+@media(max-width:768px){
+
+.crud_form {
+    
+    margin-left: 3rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-rows: 40% 40% 40%;
+    row-gap: 0.5rem;
+       
+}
+.button--primary {
+    margin: 1rem 4rem;
+}
+
+}
+
