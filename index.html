@@ -3,53 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>CRUD</title>
 </head>
 <body>
-    <section class="container">
-        <article class="profile">
-            <h1>SMART DROPS</h1>
-            <div class="slogan">“El poder del hábito aplicado con inteligencia”</div>
-            <div id="date">Diciembre 16 de 2023</div>
-
-        </article>
-        <div class="addtask">
-            <input type="text" id="input" placeholder="Agregar tarea">
-            <i id="addtask" class="fa-solid fa-circle-plus" style="color: #0e36d8;"></i>
-        </div>
-        <div class="tasklist">
-            <!--<span id="notask">No hay tareas pendientes</span>-->
-            <ul id="tasklist">
-                <li>
-                    <i class="fa-sharp fa-regular fa-circle" style="color: #f1f3f8;"></i>
-                    <p class="text"> Hacer la tarea de F5</p>
-                    <!--<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>-->
-                    <i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #f1f3f8;"></i>
-                    <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i>
-                    
-
-                </li>
-                <!--<li>
-                    <i class="fa-sharp fa-regular fa-circle" style="color: #f1f3f8;"></i>
-                    <p class="text"> Hacer el diseño en Figma</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>-->
-                    <!--<i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #f1f3f8;"></i>
-                    
-                    <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i>
-                    
-                </li>-->
-            </ul>
-
-        </div>
-
-    </section>
     
+    <main class="container">
+        <section class="title">
+            <h1>SMART DROPS</h1>
+            <p> "El poder del hábito aplicado con inteligencia"</p>
+            <!-- form-->
+            <form id="formTask" class="crud_form">
+                <input type="text" id="task" class="task_input" placeholder="Tarea">
+                <textarea type="text" id="description" placeholder="Describe la tarea" maxlength="40"></textarea>
+                <button type="submit" id="add_btn" class="button--primary">Agregar </button>
+            </form>
+            <!-- table-->
+            <table class="crud_table">
+                <thead>
+                    <tr>
+                        <th class="table_header">  </th>
+                        <th class="table_header"> Tarea</th>
+                        <th class="table_header"> Descripción</th>
+                        <th class="table_header"> Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"class="table_body">
 
-   <script href="/js/script.js">
+                </tbody>
+                       
+            </table>
+
+        </section>
+
+    </main>
+   
+          
+    <script src="/js/script.js"></script>
 </body>
 </html>
