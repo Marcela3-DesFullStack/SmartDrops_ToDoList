@@ -1,34 +1,25 @@
-const date = document.querySelector("#date");
-const taskList = document.querySelector("#tasklist");
-const input = document.querySelector("#input");
-const taskEnter = document.querySelector("#task-enter");
+const form = document.getElementById('formTask');
+const taskInput = document.getElementById('task');
+const descriptionInput = document.getElementById('description');
+const tableBody = document.getElementById('tableBody');
 
+//Local storage
+let data = JSON.parse(localStorage.getItem('formData')) || [];
 
-// Adding tasks//
-function addTask (task) {
-    const elementTask = `<li id="elementotask">
-                        <i class="fa-sharp fa-regular fa-circle" style="color: #f1f3f8;"></i>
-                        <p class="text">${task}</p>
-                        <i id="readmore.btn" class="fa-solid fa-circle-plus" style="color: #f1f3f8;"></i>
-                       <i class="fa-solid fa-trash-can" style="color: #f1f3f8;"></i> 
-                        </li>  
-                    `
-    taskList.insertAdjacentHTML("beforeend", elementTask);
-}
-taskEnter.addEventListener('click',()=> {
-    const task = input.value
-    if(task) {
-        addTask(task)
-    }
-    input.value= ''
+// Add tasks
+form.addEventListener('submit', function (event)  {
+  event.preventDefault();
 
+  const task = taskInput.value;
+  const description = descriptionInput.value;
+
+  if(task && description) {
+    const newData = {task, description};
+    data.push(newData);
+    saveDataToLocalStorage();
+    renderTable();
+    form.reset();
+  } else {
+    alert('Todos los campos son obligatorios')
+  }
 })
-// Hidden comments//
-let hiddenTaskBtn= document.getElementById("hiddentask-btn");
-let hiddenTask = document.getElementById("hiddentask");
-
-hiddenTaskBtn.addEventListener('click',hideText);
-
-function hideText () {
-    hiddenTask.classList.toggle('show');
-}
