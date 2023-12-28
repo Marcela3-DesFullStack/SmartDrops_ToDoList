@@ -27,4 +27,58 @@ form.addEventListener('submit', function (event)  {
 function saveDataToLocalStorage() {
     localStorage.setItem ('formData', JSON.stringify(data));
   }
+//Render UI
+function renderTable() {
+    tableBody.innerHTML= '';
+  
+   //Create cells and buttons
+    data.forEach(function(item, index){
+      const row = document.createElement('tr');
+      const checkedCell = document.createElement('td');
+      const checkedCheckbox = document.createElement('input');
+      const taskCell = document.createElement('td');
+      const descriptionCell = document.createElement('td');
+      const actionsnCell = document.createElement('td');
+      const editButton = document.createElement('button');
+      const deleteButton = document.createElement('button');
+  
+      
+      taskCell.textContent = item.task;
+      descriptionCell.textContent = item.description;
+      
+  
+      // Giving styles to buttons and checkbox
+      checkedCheckbox.type = 'checkbox';
+      checkedCheckbox.classList.add('checkbox');
+      checkedCheckbox.checked = false; 
+      editButton.classList.add('button', 'button--secondary');
+      deleteButton.classList.add('button', 'button--tertiary');
+  
+      // Changing buttons for icons
+      editButton.innerHTML = '<i class="fas fa-edit"></i> ';
+      deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+  
+      // Edit task button
+      editButton.addEventListener('click', function() {
+        editData(index);
+      })
+      
+    //Delete task button
+    deleteButton.addEventListener('click', function() {
+        deleteData(index);
+      })
+  
+      checkedCell.appendChild(checkedCheckbox);
+      actionsnCell.appendChild(editButton);
+      actionsnCell.appendChild(deleteButton);
+  
+      row.appendChild(checkedCell);
+      row.appendChild(taskCell);
+      row.appendChild(descriptionCell);
+      row.appendChild(actionsnCell);
+  
+      tableBody.appendChild(row);
+  
+    });
+  }
   
