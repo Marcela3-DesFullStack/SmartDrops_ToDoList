@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button, input, textarea {
+    font-family: 'Macondo Swash Caps', cursive;;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 10rem;
+    
+}
+.title {
+    text-align: center;
+}
+
+.crud_form {
+    display: flex;
+    margin: 0.63rem 0;
+    margin-top: 4.4rem;
+    margin-bottom: 2.2rem;
+       
+}
+.task_input , textarea {
+    flex: 1;
+    padding: 0.3rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+  
+.button--primary {
+    background-color: blueviolet;
+    border: none;
+    color: azure;
+    border-radius: 1rem;
+    padding: 0.3rem 0.63rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.button--secondary {
+    background-color: rgb(46, 14, 226);
+    border: none;
+    color: azure;
+    border-radius: 1rem;
+    padding: 0.3rem 0.3rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.button--tertiary {
+    background-color: rgb(46, 14, 226);
+    border: none;
+    color: azure;
+    border-radius: 1rem;
+    padding: 0.3rem 0.3rem;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.checkbox {
+    width: 1.2rem; 
+    height: 2rem; 
+    border-radius: 300px; 
+    border: 1.5rem solid #1b138a; 
+    cursor: pointer;
+   
+
+}
+
+.crud_table {
+    width: 100%;
+    border-spacing: 0.2rem 1rem;
+    /*border-collapse: collapse;*/
+}
+
+.table_header , .table_body td {
+    border-top: 0.01rem solid blueviolet;
+    padding: 0.5rem;
+    
+}
+.table_header  {
+    background-color: rgb(194, 177, 211);
+    color: rgb(97, 20, 185);
+
+}
+.table_body td {
+    white-space:normal;
+    vertical-align: middle;
+
+}
+.table_body td:nth-child(1) {
+    max-width: 1.8rem;
+    }
+.table_body td:nth-child(2) {
+   max-width: 5.5rem;
+   }
+.table_body td:nth-child(3) {
+    max-width: 10rem;
+    text-align: justify;
+    }
+
+.table_body td:nth-child(4) {
+display: flex;
+justify-content:space-around;
+}
+
+@media(max-width:768px){
+
+.crud_form {
+    
+    margin-left: 3rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-rows: 40% 40% 40%;
+    row-gap: 0.5rem;
+       
+}
+.button--primary {
+    margin: 1rem 4rem;
+}
+
+}
+
