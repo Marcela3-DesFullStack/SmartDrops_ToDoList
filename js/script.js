@@ -23,3 +23,8 @@ form.addEventListener('submit', function (event)  {
     alert('Todos los campos son obligatorios')
   }
 })
+//Saving data
+function saveDataToLocalStorage() {
+    localStorage.setItem ('formData', JSON.stringify(data));
+  }
+  
