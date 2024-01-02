@@ -6,6 +6,7 @@ const tableBody = document.getElementById('tableBody');
 //Local storage
 let data = JSON.parse(localStorage.getItem('formData')) || [];
 
+
 // Add tasks
 form.addEventListener('submit', function (event)  {
   event.preventDefault();
@@ -58,6 +59,8 @@ function renderTable() {
     editButton.innerHTML = '<i class="fas fa-edit"></i> ';
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
 
+    
+
     // Edit task button
     editButton.addEventListener('click', function() {
       editData(index);
@@ -103,4 +106,12 @@ function deleteData(index) {
 //Render Table
 renderTable();
 
+// Without Tasks message
 
+if (data.length === 0) {
+  const noTasksMessage = document.getElementById('noTasksMessage');
+  noTasksMessage.style.display = 'block';
+} else {
+  const noTasksMessage = document.getElementById('noTasksMessage');
+  noTasksMessage.style.display = 'none';
+}

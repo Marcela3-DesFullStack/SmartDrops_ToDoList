@@ -12,6 +12,8 @@
     --purple-light: #d08ff8;
     --white : azure;
     --black: #000000;
+    --grey: #e1dbe7;
+    --blueviolet :blueviolet ;
 
 }
 
@@ -19,7 +21,7 @@
 textarea , button {
     font-family: 'Macondo Swash Caps', cursive;
     font-size: 1.2rem;
-    
+        
     
 }
 
@@ -67,9 +69,9 @@ aside .citation {
 }
 
 .container {
-    width: 45rem;
-    height: 39rem;
-    margin-top: 1rem;
+    width: 43rem;
+    height: 38rem;
+    margin-top: 1.2rem;
     margin-left: 3rem;
     margin-right: 1rem;
     padding-left: 8rem;
@@ -81,6 +83,10 @@ aside .citation {
     text-align: center;
     color: var(--blue);
     font-size: 30px;
+    background-color:var(--grey);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
 } 
 
 p {
@@ -88,6 +94,10 @@ p {
     color: var(--purple);
     font-size: 20px;
     font-weight: 700;
+    background-color: var(--grey);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
     
 }
 
@@ -100,34 +110,35 @@ p {
     align-content: center;
     margin-left: 2rem;
     margin-top: 4.4rem;
-    padding-left: 5.6rem;
-    width: 27px;
+    padding-left: 6rem;
+   
 
-    
-       
+          
 }
 .task_input {
     height: 2rem;
-    width: 20rem;
+    width: 17rem;
     flex: 1;
     font-family: 'Macondo Swash Caps', cursive;
     padding: 0.1rem;
     border-radius: 3rem;
-    border-color:#400FCB;
+    border-color:var(--blue);
     border-width: 0.15rem;
+    margin-left: 2.2rem;
     margin-right: 1rem;
     font-size: 1.2rem;
     text-align: center;
 }
 textarea {
     height: 3rem;
-    width: 20rem;
+    width: 17rem;
     flex: 1;
     padding: 0.1rem;
     border-radius: 3rem;
-    border-color:#400FCB;
+    border-color:var(--blue);
     border-width: 0.15rem;
-    margin-right: 1rem;
+    margin-right: 0.8rem;
+    margin-left: 2.2rem;
     text-align: center;
 }
 
@@ -136,18 +147,19 @@ textarea {
     font-size: 1rem;
     width: 8rem;
     align-self: center;
-    background-color: blueviolet;
+    background-color: var(--blueviolet) ;
     border: none;
     color: var(--white);
     border-radius: 1rem;
-    margin-left: 6rem;
+    margin-left: 7rem;
     padding: 0.5rem 0.63rem;
     transition: all 0.5s;
     transform: scale(1.2);
 }
 .button--secondary , .button--tertiary {
     background-color: var(--blue);
-    height: 1.5rem;
+    height: 2rem;
+    width: 1.8rem;
     border: none;
     color: var(--white);
     border-radius: 1rem;
@@ -157,53 +169,85 @@ textarea {
 }
 
 .checkbox {
-    width: 1rem; 
-    height: 2rem; 
+    width: 1.5rem; 
+    height: 2.0rem; 
     border-radius: 300px; 
-    border: 1.5rem solid var(--blue); 
+    border: 1.8rem solid var(--purple); 
     cursor: pointer;
    
 
 }
 
+
 .crud_table {
     width: 100%;
     background-color: var(--purple-light);
     border-spacing: 0.2rem 1rem;
-    /*border-collapse: collapse;*/
+ 
 }
-
-.table_header , .table_body td {
-    /*font-size: 0.6rem;*/
-    border-top: 0.01rem solid var(--purple-light);
-    padding: 0.3rem;
-    
-}
-.table_header  {
+.table_header {
+    font-size: 1.25rem;
     background-color: var(--purple-light);
-    color: rgb(97, 20, 185);
+    color: var(--blue);
 
 }
+
 .table_body td {
+    font-size: 1.1rem;
+    border-top: 0.01rem solid var(--blue);
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    text-align: center;
     white-space:normal;
     vertical-align: middle;
-
+    color: var(--purple);
+    font-weight: 700;
+    
 }
+.no-tasks-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--purple);
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--grey);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+}
+
 .table_body td:nth-child(1) {
     max-width: 1.8rem;
     }
 .table_body td:nth-child(2) {
    max-width: 5.5rem;
+   
    }
 .table_body td:nth-child(3) {
     max-width: 10rem;
-    text-align: justify;
+    text-align: center;
     }
 
 .table_body td:nth-child(4) {
-display: flex;
-justify-content:space-around;
+    display: flex;
+    justify-content:space-around;
 }
+
+.slogan {
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--purple);
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--grey);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+    
+}
+
+
 
 @media(max-width:768px){
 
@@ -219,6 +263,8 @@ justify-content:space-around;
 .button--primary {
     margin: 1rem 4rem;
 }
+
+
 
 }
 
