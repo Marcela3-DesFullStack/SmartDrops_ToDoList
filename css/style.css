@@ -51,6 +51,7 @@ aside .top {
     height: 101%;
     flex-grow: 1;
     box-sizing: border-box;
+    display: block;
 
     
 
@@ -64,6 +65,7 @@ aside .citation {
     height: 100%;
     flex-grow: 1;
     box-sizing: border-box;
+    display: block;
     
     
 }
@@ -248,23 +250,42 @@ textarea {
 }
 
 
+@media (max-width: 900px) {
+    .main_container {
+      grid-template-columns: 1fr;
+      align-content: center;
+    }
+  
+    .container {
+        width: 420px; 
+        margin: 0; 
+        height:740px;
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-right: 40px;
+        padding-bottom: 5px;
 
-@media(max-width:768px){
-
-.crud_form {
+    }
+  
+    .title,
+    .p,
+    .crud_form,
+    .slogan,
+    .crud_table {
+      margin-left: 0; 
+      margin-right: 0px; 
+      padding-top: 0rem;
+      justify-content: center;
+      padding-left:0px;
+      border-radius: 1rem;
+    }
+  
+    aside { 
+      display: none; 
+    }
     
-    margin-left: 3rem;
-    margin-right: 2rem;
-    display: grid;
-    grid-template-rows: 40% 40% 40%;
-    row-gap: 0.5rem;
-       
-}
-.button--primary {
-    margin: 1rem 4rem;
-}
-
-
-
-}
-
+    .no-tasks-message {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
