@@ -128,29 +128,31 @@ function updateNoTasksMessage() {
   }
 }
 
-
-/// Event listener for show all button
+// Filters
+/// Show all tasks
 showAllButton.addEventListener('click', function () {
   renderTable(data);
 });
 
+// Show checked tasks
+
 showCheckedButton.addEventListener('click', function() {
-  const checkedData = showCheckedTasks(); // Obtener las tareas checkeadas
+  const checkedData = showCheckedTasks(); 
   const tableBody = document.getElementById('tableBody');
   const rows = tableBody.querySelectorAll('tr');
 
   for (const row of rows) {
-    const checkboxCell = row.querySelector('td input[type="checkbox"]'); // Obtener la celda del checkbox
-    const checkbox = checkboxCell.checked; // Obtener el valor del checkbox
+    const checkboxCell = row.querySelector('td input[type="checkbox"]'); 
+    const checkbox = checkboxCell.checked; 
 
     if (checkbox) {
-      const taskCell = row.querySelector('td:nth-child(2)'); // Obtener la celda de la tarea
+      const taskCell = row.querySelector('td:nth-child(2)'); 
       const task = taskCell.textContent;
 
-      // Verificar si la tarea está en los datos checkeados
+      // Verify checked tasks
       const taskInCheckedData = checkedData.some((item) => item.task === task);
 
-      // Mostrar u ocultar la fila según el estado de la tarea checkeada
+      // Show or hidden row if checked task
       row.style.display = taskInCheckedData ? '' : 'none';
     }
   }

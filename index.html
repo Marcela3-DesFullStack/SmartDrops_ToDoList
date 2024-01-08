@@ -3,61 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>CRUD</title>
+    <title>LOGIN</title>
 </head>
-<body >
-    <main class="main_container">
-     
-        <aside>
-            <img class="top" src="/img/excursionista-cima.jpg" alt="Llegar a la cima">
-        </aside>
+<body>
     
-        <section class="container">
-            <h1 class="title">SMART DROPS</h1>
-                <p> "Gotas (tareas diarias) que te encaminan hacia tu sueño"</p>
-            <!-- form-->
-            <form id="formTask" class="crud_form">
-                <input type="text" id="task" class="task_input" placeholder="Tarea">
-                <textarea type="text" id="description" placeholder="Describe la tarea" maxlength="40"></textarea>
-                <button type="submit" id="add_btn" class="button--primary">Agregar </button>
-            </form>
+    <form action="">
+        <h1 class="title">Bienvenido</h1>
+        <label for="">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" placeholder="Nombre de Usuario">
+        </label>
+        <label for="">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password">
+        </label>
+        <a href="#" class="link">¿Olvidaste tu contraseña?</a>
 
-            <div class="filter_container"> Panel de Filtros :
-                <button class="filter" id="showAll">Todas</button>
-                <button  class="filter" id="showChecked">Realizadas</button>
-                <button  class="filter" id="showNoChecked">Pendientes</button>
-            </div>
-
-            <!-- table-->
-            <table class="crud_table">
-                <thead>
-                    <tr>
-                        <th class="table_header"><i class="fa-solid fa-square-check"></i></th>
-                        <th class="table_header"> Tarea</th>
-                        <th class="table_header"> Descripción</th>
-                        <th class="table_header"> Acciones</th>
-                    </tr>
-                    
-                </thead>
-                <tbody id="tableBody"class="table_body">
-                                     
-                </tbody>
-                
-               
-            </table>
-            <div id="noTasksMessage" class="no-tasks-message">No hay tareas pendientes
-            </div>
-            
-        </section>
-        <aside>
-            <img class="citation" src="/img/ladrillos-juguete-sobre-mesa.jpg" alt="Cita inspiradora">
-        </aside>
-
-    </main>
-                 
-    <script src="/js/script.js"></script>
+        <button id="login">Login</button>
+    </form>
+   
+          
+    <script src="/js/login.js"></script>
 </body>
 </html>
