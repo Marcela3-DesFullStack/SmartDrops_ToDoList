@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>CRUD</title>
 </head>
 <body >
@@ -23,11 +24,18 @@
                 <textarea type="text" id="description" placeholder="Describe la tarea" maxlength="40"></textarea>
                 <button type="submit" id="add_btn" class="button--primary">Agregar </button>
             </form>
+
+            <div class="filter_container"> Panel de Filtros :
+                <button class="filter" id="showAll">Todas</button>
+                <button  class="filter" id="showChecked">Realizadas</button>
+                <button  class="filter" id="showNoChecked">Pendientes</button>
+            </div>
+
             <!-- table-->
             <table class="crud_table">
                 <thead>
                     <tr>
-                        <th class="table_header">  </th>
+                        <th class="table_header"><i class="fa-solid fa-square-check"></i></th>
                         <th class="table_header"> Tarea</th>
                         <th class="table_header"> Descripción</th>
                         <th class="table_header"> Acciones</th>
@@ -42,7 +50,7 @@
             </table>
             <div id="noTasksMessage" class="no-tasks-message">No hay tareas pendientes
             </div>
-            <article class="slogan"> "El poder del hábito aplicado con inteligencia"</article>
+            
         </section>
         <aside>
             <img class="citation" src="/img/ladrillos-juguete-sobre-mesa.jpg" alt="Cita inspiradora">
