@@ -1,3 +1,13 @@
+//Showing welcome message
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
+const password = urlParams.get('password');
+console.log('URL:', window.location.href);
+console.log('Username:', username);
+
+document.getElementById('welcomeMessage').textContent = 'Bienvenid@ ' + username;
+
+
 const form = document.getElementById('formTask');
 const taskInput = document.getElementById('task');
 const descriptionInput = document.getElementById('description');
@@ -128,40 +138,42 @@ function updateNoTasksMessage() {
   }
 }
 
-// Filters
-/// Show all tasks
-showAllButton.addEventListener('click', function () {
-  renderTable(data);
-});
 
-// Show checked tasks
+  // Filters
+  /// Show all tasks
+  showAllButton.addEventListener('click', function () {
+    renderTable(data);
+  });
 
-showCheckedButton.addEventListener('click', function() {
-  const checkedData = showCheckedTasks(); 
-  const tableBody = document.getElementById('tableBody');
-  const rows = tableBody.querySelectorAll('tr');
+  // Show checked tasks
+  showCheckedButton.addEventListener('click', function() {
+    const checkedData = showCheckedTasks(); 
+    const tableBody = document.getElementById('tableBody');
+    const rows = tableBody.querySelectorAll('tr');
 
-  for (const row of rows) {
-    const checkboxCell = row.querySelector('td input[type="checkbox"]'); 
-    const checkbox = checkboxCell.checked; 
+    for (const row of rows) {
+      const checkboxCell = row.querySelector('td input[type="checkbox"]'); 
+      const checkbox = checkboxCell.checked; 
 
-    if (checkbox) {
-      const taskCell = row.querySelector('td:nth-child(2)'); 
-      const task = taskCell.textContent;
+      if (checkbox) {
+        const taskCell = row.querySelector('td:nth-child(2)'); 
+        const task = taskCell.textContent;
 
-      // Verify checked tasks
-      const taskInCheckedData = checkedData.some((item) => item.task === task);
+        // Verify checked tasks
+        const taskInCheckedData = checkedData.some((item) => item.task === task);
 
-      // Show or hidden row if checked task
-      row.style.display = taskInCheckedData ? '' : 'none';
+        // Show or hidden row if checked task
+        row.style.display = taskInCheckedData ? '' : 'none';
+      }
     }
-  }
-});
+  });
+
+  // Initial render
+  renderTable();
 
 
 
-// Initial render
-renderTable();  
+
 
 
 

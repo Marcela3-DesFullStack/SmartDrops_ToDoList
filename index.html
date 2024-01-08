@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>LOGIN</title>
+    <script defer src="/js/login.js"></script>
+
 </head>
+
 <body>
     <aside>
-        <img class="top" src="/img/excursionista-cima.jpg alt="Llegar a la cima">
+        <img class="top" src="/img/excursionista-cima.jpg" alt="Llegar a la cima">
     </aside>
     <section class="container">
         
@@ -21,17 +24,17 @@
         
         <form action="">
             <h1 class="title">Bienvenido</h1>
-            <label for="">
+            <label>
                 <i class="fa-solid fa-user"></i>
                 <input type="text" id="username" placeholder="Nombre de Usuario">
             </label>
-            <label for="">
+            <label>
                 <i class="fa-solid fa-lock"></i>
                 <input type="password" id="password" placeholder="Password">
             </label>
             <a href="#" class="link">¿Olvidaste tu contraseña?</a>
 
-            <button id="login">Login</button>
+            <button id="login" onclick="login()">Login</button>
         </form>
         
     </section>
@@ -39,6 +42,5 @@
         <img class="citation" src="/img/ladrillos-juguete-sobre-mesa.jpg" alt="Cita inspiradora">
     </aside>
           
-    <script src="/js/login.js"></script>
 </body>
 </html>

@@ -56,13 +56,13 @@
     padding: 1.3rem 1.6rem;
     box-shadow: 0 1rem 1rem var(--black);
     border-radius: 10%;
-    min-width: 4rem;
+    min-width: 5rem;
     
     
    }
    form .title {
     color: var(--purple);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.9rem;
    }
@@ -72,7 +72,7 @@
    }
 
    form label .fa-solid {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--purple);
     margin-right: 0.6rem;
    }
@@ -80,11 +80,11 @@
    form label input {
     border-radius: 5px;
     border: none;
-    height: 1.5rem;
+    height: 2rem;
     color: var(--black);
     border-bottom: solid 1px var(--blueviolet);
     padding: 0 0.3rem;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 
    }
    form label input ::placeholder {
@@ -100,7 +100,7 @@
    form button {
     color: azure;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border: var(--blueviolet);
     border-radius: 0.5rem;
     background: var(--purple);
@@ -146,7 +146,6 @@ aside .citation {
   padding-right: 2.8rem;
   padding-left: 0px;
   margin-right: 0px;
-  margin-top: 2rem;
   padding-bottom: 4rem;
 }
 
