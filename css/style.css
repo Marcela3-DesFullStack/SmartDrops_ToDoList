@@ -257,19 +257,6 @@ textarea {
     justify-content:space-around;
 }
 
-.slogan {
-    padding-top: 1rem;
-    text-align: center;
-    color: var(--purple);
-    font-size: 20px;
-    font-weight: 700;
-    background-color: var(--grey);
-    margin-left: 3rem;
-    margin-right: 3rem;
-    border-radius: 1rem;
-    
-}
-
 
 @media (max-width: 900px) {
     .main_container {
@@ -281,7 +268,7 @@ textarea {
         width: 420px;
         margin: 0;
         height: 740px;
-        padding-left: 25px;
+        padding-left: 1rem;
         padding-top: 5px;
         padding-right: 40px;
         padding-bottom: 5px;

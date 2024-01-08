@@ -5,29 +5,63 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Macondo Swash Caps', cursive; 
+    }
+    :root {
+      --blue : #400FCB;
+      --purple: #540A81;
+      --purple-light: #d08ff8;
+      --white : azure;
+      --black: #000000;
+      --grey: #e1dbe7;
+      --blueviolet :blueviolet ;
+  
+    }
+    body {
+      
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
     }
 
-    body {
-      display: flex;  
+    .container {
+      display: flex;    
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 40rem;
-      background: azure;
+      background: var(--white);
+      background-image: url(/img/pexels-pixabay-53470_gotas1.jpg);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
       
      
     }
-
-   form {
+    .title_main {
+      text-align: center;
+      color: var(--blue);
+      font-size: 1.3rem;
+      background-color:var(--grey);
+      margin-left: 3rem;
+      margin-right: 3rem;
+      border-radius: 1rem;
+      margin-bottom: 5rem;
+  } 
+  
+    form {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, rgb(245, 147, 224), rgb(197, 94, 197));
     text-align: center;
     padding: 1.3rem 1.6rem;
-    box-shadow: 0 1rem 1rem #0a0a0a;
+    box-shadow: 0 1rem 1rem var(--black);
+    border-radius: 10%;
+    min-width: 4rem;
+    
     
    }
    form .title {
-    color:#6e12c4;
+    color: var(--purple);
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.9rem;
@@ -39,7 +73,7 @@
 
    form label .fa-solid {
     font-size: 1.25rem;
-    color: #6e12c4;
+    color: var(--purple);
     margin-right: 0.6rem;
    }
 
@@ -47,18 +81,19 @@
     border-radius: 5px;
     border: none;
     height: 1.5rem;
-    color: black;
-    border-bottom: solid 1px blueviolet;
+    color: var(--black);
+    border-bottom: solid 1px var(--blueviolet);
     padding: 0 0.3rem;
     font-size: 0.9rem;
 
    }
    form label input ::placeholder {
-    color: black;
+    color: var(--black);
    }
    form .link {
-    color: #281e41;
+    color: var(--purple);
     margin-bottom: 1rem;
+    font-weight: 700;
 
    }
 
@@ -66,15 +101,56 @@
     color: azure;
     font-weight: 700;
     font-size: 1rem;
-    border: blueviolet;
+    border: var(--blueviolet);
     border-radius: 0.5rem;
-    background: #6e12c4;
+    background: var(--purple);
     padding: 0.6rem 0.9rem;
     margin-right: 3rem;
     margin-left: 3rem;
     cursor: pointer;
 
    }
+   aside .top {
+    background-image: url('/img/excursionista-cima.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 120%;
+    height: 101%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: block;
+
+   
+}
+aside .citation {
+    background-image: url('/img/ladrillos-juguete-sobre-mesa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 110%;
+    height: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: block;
+    
+    
+}
+@media (max-width: 900px) {
+  aside {
+    display: none;
+}
+.container {
+  width: 26.25rem;
+  height: 46.25rem;
+  padding-right: 2.8rem;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+}
 
 
 
