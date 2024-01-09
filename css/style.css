@@ -102,7 +102,11 @@ p, div {
     border-radius: 1rem;
     
 }
-
+#welcomeMessage {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--blue)
+}
 .crud_form {
     margin-bottom: 2.2rem;
     margin-right: 2rem;

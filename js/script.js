@@ -51,7 +51,6 @@ function showCheckedTasks() {
       checkedData.push(item);
     }
   }
-
   return checkedData;
 }
 
@@ -137,8 +136,6 @@ function updateNoTasksMessage() {
     noTasksMessage.style.display = 'none';
   }
 }
-
-
   // Filters
   /// Show all tasks
   showAllButton.addEventListener('click', function () {
