@@ -16,6 +16,8 @@ const showAllButton = document.getElementById('showAll');
 const showCheckedButton = document.getElementById('showChecked');
 const noTasksMessage = document.getElementById('noTasksMessage');
 
+
+
 // Local storage
 let data = JSON.parse(localStorage.getItem('formData')) || [];
 
@@ -53,6 +55,7 @@ function showCheckedTasks() {
   }
   return checkedData;
 }
+const originalCheckboxState = {};
 
 // Render UI
 function renderTable() {
@@ -70,7 +73,10 @@ function renderTable() {
     const deleteButton = document.createElement('button');
 
     checkedCheckbox.type = 'checkbox';
-    checkedCheckbox.checked = item.checked;
+    checkedCheckbox.checked = originalCheckboxState[index] || item.checked;
+
+    originalCheckboxState[index] = checkedCheckbox.checked;
+    item.checked = checkedCheckbox.checked;
 
     taskCell.textContent = item.task;
     descriptionCell.textContent = item.description;
@@ -138,8 +144,13 @@ function updateNoTasksMessage() {
 }
   // Filters
   /// Show all tasks
+  
   showAllButton.addEventListener('click', function () {
-    renderTable(data);
+      data.forEach((item, index) => {
+      item.checked = originalCheckboxState[index];
+    });
+  
+    renderTable();
   });
 
   // Show checked tasks
@@ -153,7 +164,7 @@ function updateNoTasksMessage() {
       const checkbox = checkboxCell.checked; 
 
       if (checkbox) {
-        const taskCell = row.querySelector('td:nth-child(2)'); 
+        const taskCell = row.querySelector('td:nth-child(1)'); 
         const task = taskCell.textContent;
 
         // Verify checked tasks
