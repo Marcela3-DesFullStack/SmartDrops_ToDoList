@@ -5,7 +5,7 @@ const password = urlParams.get('password');
 console.log('URL:', window.location.href);
 console.log('Username:', username);
 
-document.getElementById('welcomeMessage').textContent = 'Bienvenid@ ' + username;
+document.getElementById('welcomeMessage').textContent = '¡Bienvenid@ ' + username + ' , un nuevo día para cumplir tus metas!';
 
 
 const form = document.getElementById('formTask');

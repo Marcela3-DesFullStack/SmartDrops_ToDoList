@@ -14,7 +14,7 @@ button.addEventListener('click', (e) => {
     alert('Todos los campos son obligatorios');
     return; 
   }
-  const url = `http://127.0.0.1:5500/tasks.html?username=${encodeURIComponent(username.value)}`;
+  const url = `http://127.0.0.1:5500/pages/tasks.html?username=${encodeURIComponent(username.value)}`;
   
   window.location.href = url;
 });

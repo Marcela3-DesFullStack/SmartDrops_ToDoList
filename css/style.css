@@ -91,7 +91,7 @@ aside .citation {
     border-radius: 1rem;
 } 
 
-p, div {
+div {
     text-align: center;
     color: var(--purple);
     font-size: 20px;
@@ -103,19 +103,22 @@ p, div {
     
 }
 #welcomeMessage {
+    text-align: center;
     padding: 1rem;
-    font-size: 1.7rem;
-    color: var(--blue)
+    font-size: 1.5rem;
+    color: var(--blue);
+    background-color: var(--grey);
+    border-radius: 1rem;
 }
 .crud_form {
-    margin-bottom: 2.2rem;
+    margin-bottom: 2rem;
     margin-right: 2rem;
     display: grid;
     grid-template-rows: 40% 40% 40%;
     row-gap: 0.2rem;
     align-content: center;
     margin-left: 2rem;
-    margin-top: 4.4rem;
+    margin-top: 2.5rem;
     padding-left: 6rem;
    
 
