@@ -1,4 +1,4 @@
-SMART DROPS 
+SMART DROPS (https://marcela3-desfullstack.github.io/SmartDrops_ToDoList/)
 Es una herramienta que apoya la gestión de planeación de tareas diarias para el logro de tus objetivos a largo plazo.
 Se compone de:
 LOGIN: Se ingresa a la aplicaciòn a través de un username y una contraseña.
