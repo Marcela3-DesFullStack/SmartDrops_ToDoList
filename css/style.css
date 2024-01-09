@@ -29,7 +29,7 @@ textarea , button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(/img/pexels-pixabay-53470_gotas1.jpg);
+    background-image: url('/img/pexels-pixabay-53470_gotas1.jpg');
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
